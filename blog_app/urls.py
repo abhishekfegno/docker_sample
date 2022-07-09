@@ -24,15 +24,8 @@ from rest_framework import routers
 # router.register(r'blogs', BlogView)
 # router.register(r'groups', views.GroupViewSet)  
 
-
-
-
-
-
-
-
+app_name = 'blog_app'
 urlpatterns = [
-    path('blogs/',BlogView.as_view(),name='blog-view'),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('', IndexView.as_view(), name='index'),
 
 ]
